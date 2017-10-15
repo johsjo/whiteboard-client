@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 const props = {
 
-  match: PropTypes.string.isRequired,
-  history: PropTypes.arrayOf(PropTypes.string),
-  location: PropTypes.string.isRequired,
+  match: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
 
 };
 
