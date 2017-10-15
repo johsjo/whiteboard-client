@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './reduxStore';
 import './css/master.css';
-import NoteContainer from './common/WhiteboardContainer';
+import Routes from './routes';
 
 ReactDOM.render(
   <Provider store={store}>
-    <NoteContainer />
+    <Routes />
   </Provider>
   , document.getElementById('root'));
