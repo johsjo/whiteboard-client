@@ -1,5 +1,7 @@
 import React from 'react';
 
+import RouteInfoProps from './RouteInfo.props';
+
 const RouteInfo = props => (
   <div>
     <h1>{props.match.params.id}</h1>
@@ -8,5 +10,7 @@ const RouteInfo = props => (
     <p>location = {JSON.stringify(props.location)}</p>
   </div>
 );
+
+RouteInfo.propTypes = RouteInfoProps;
 
 export default RouteInfo;
