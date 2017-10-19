@@ -3,10 +3,7 @@ import './AddWhiteboard.css';
 
 import addWhiteboardProps from './AddWhiteboard.props';
 
-// const AddWhiteboard = (props) => {
 class AddWhiteboard extends React.Component {
-  // let inputTitle;
-  // let inputID;
   constructor() {
     super();
     this.state = {

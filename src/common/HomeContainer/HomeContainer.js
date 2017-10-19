@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import HomeWrapper from './HomeWrapper';
 import { addWhiteboard, removeWhiteboard } from '../../reduxStore/config/whiteboards';
 
-// whiteboards: state.whiteboards,
 const mapStateToProps = state => ({
   whiteboards: state.reducerWhiteboards.whiteboards,
 });
