@@ -6,7 +6,7 @@ const Add = (props) => {
   let inputItem;
   let inputValues = [];
   const handleClick = () => {
-    props.onAdd({ title: inputTitle.value, infoList: props.infoListItems, color: 'primary' });
+    props.onAdd({ title: inputTitle.value, infoList: props.infoListItems, color: 'primary', whiteboardId: props.whiteboardId });
     inputItem.value = '';
     inputTitle.value = '';
   };
