@@ -1,0 +1,17 @@
+.WhiteboardListItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid grey;
+  width: 350px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.WhiteboardListItem h4 {
+  text-align: center;
+  width: 300px;
+  height: 20px;
+  line-height: 40px;
+}
