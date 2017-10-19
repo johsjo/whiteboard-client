@@ -1,12 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import HomeContainer from '../../common/HomeContainer';
 
 const Home = () => (
   <div>
-    <div>
-      <NavLink to="test" activeClassName="Home-active-link"> test </NavLink>
-      <NavLink to="/" activeClassName="Home-active-link">Home</NavLink>
-    </div>
+    <h1>Floggit whiteboards</h1>
+    <HomeContainer />
   </div>
 );
 
