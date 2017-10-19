@@ -1,4 +1,5 @@
 import React from 'react';
+import './HomeWrapper.css';
 
 import WhiteboardList from './components/WhiteboardList';
 import HomeWrapperProps from './HomeWrapper.props';
@@ -6,12 +7,12 @@ import AddComponent from './components/AddWhiteboard';
 
 const HomeWrapper = props => (
   <div className="HomeContainer-wrapper">
-    <AddComponent
-      onAdd={props.handleAddWhiteboard}
-    />
     <WhiteboardList
       whiteboards={props.whiteboards}
-      onRemove={props.handleRemoveWhiteboard}
+      onRemoveWhiteboard={props.handleRemoveWhiteboard}
+    />
+    <AddComponent
+      onAddWhiteboard={props.handleAddWhiteboard}
     />
   </div>
 );

@@ -1,19 +1,19 @@
 import { connect } from 'react-redux';
 
 import HomeWrapper from './HomeWrapper';
-import { addWhiteBoard, removeWhiteBoard } from '../../reduxStore/config/whiteboard';
+import { addWhiteboard, removeWhiteboard } from '../../reduxStore/config/whiteboards';
 
+// whiteboards: state.whiteboards,
 const mapStateToProps = state => ({
-  whiteboards: state.whiteboards,
+  whiteboards: state.reducerWhiteboards.whiteboards,
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleRemove: (id) => {
-    dispatch(removeWhiteBoard(id));
+  handleRemoveWhiteboard: (id) => {
+    dispatch(removeWhiteboard(id));
   },
-  handleAdd: (note) => {
-    dispatch(addWhiteBoard(note));
-    // dispatch(clearInfoList());
+  handleAddWhiteboard: (title) => {
+    dispatch(addWhiteboard(title));
   },
 });
 

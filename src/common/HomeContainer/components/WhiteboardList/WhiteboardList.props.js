@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape({
+  whiteboards: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   })),
-  onItemRemove: PropTypes.func.isRequired,
+  onRemoveWhiteboard: PropTypes.func.isRequired,
 };
 
 export default propTypes;

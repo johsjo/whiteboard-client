@@ -1,34 +1,71 @@
 import React from 'react';
+import './AddWhiteboard.css';
 
 import addWhiteboardProps from './AddWhiteboard.props';
 
-const AddWhiteboard = (props) => {
-  let input;
+// const AddWhiteboard = (props) => {
+class AddWhiteboard extends React.Component {
+  // let inputTitle;
+  // let inputID;
+  constructor() {
+    super();
+    this.state = {
+      inputTitle: '',
+      addFormVisible: false,
+    };
+    this.handleClickShowForm = this.handleClickShowForm.bind(this);
+    this.handleClickSave = this.handleClickSave.bind(this);
+  }
 
-  const handleClick = () => {
-    props.handleAddWhiteboard(input.value);
-    input.value = '';
-    input.focus();
-  };
+  handleClickShowForm() {
+    this.setState({ addFormVisible: !this.state.addFormVisible });
+  }
 
-  return (
-    <div>
-      <input
-        className="add-whiteboard-input"
-        type="text"
-        ref={(currentElement) => { input = currentElement; }}
-        placeholder="todo task"
-      />
+  handleClickSave() {
+    this.props.onAddWhiteboard(this.inputTitle.value);
+    this.inputTitle.value = '';
+    this.setState({ addFormVisible: !this.state.addFormVisible });
+  }
+
+  generateAddForm() {
+    return (
+      <div className="hidden-form">
+        <div className="input-form">
+          <h5>
+          Name:
+          </h5>
+          <input
+            className="add-whiteboard-input"
+            type="text"
+            ref={(currentElement) => { this.inputTitle = currentElement; }}
+            placeholder="Whiteboard name"
+          />
+        </div>
+        <button
+          className="add-whiteboard-button"
+          type="button"
+          onClick={this.handleClickSave}
+        >
+      Save
+        </button>
+      </div>
+    );
+  }
+
+  render() {
+    return (<div>
       <button
         className="add-whiteboard-button"
         type="button"
-        onClick={handleClick}
+        onClick={this.handleClickShowForm}
       >
-      add item
+    add whiteboard
       </button>
+      { this.state.addFormVisible ? this.generateAddForm() : null }
     </div>
-  );
-};
+    );
+  }
+}
 
 AddWhiteboard.propTypes = addWhiteboardProps;
 

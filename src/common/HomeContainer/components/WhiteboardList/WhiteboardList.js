@@ -1,21 +1,22 @@
 import React from 'react';
+import './WhiteboardList.css';
 
 import WhiteboardListItem from './components/WhiteboardListItem';
 import whiteboardListProps from './WhiteboardList.props';
 
 const WhiteboardList = (props) => {
   const handleRemove = (id) => {
-    props.onWhiteboardRemove(id);
+    props.onRemoveWhiteboard(id);
   };
 
   return (
-    <ul className="TodoList">
+    <ul className="whiteboard-list">
       {
         props.whiteboards.map(whiteboard => (
           <WhiteboardListItem
             key={whiteboard.id}
             id={whiteboard.id}
-            value={whiteboard.value}
+            title={whiteboard.title}
             onRemove={handleRemove}
           />
         ))

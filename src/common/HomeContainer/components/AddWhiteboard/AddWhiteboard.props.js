@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const props = {
   title: PropTypes.string,
-  handleAddWhiteboard: PropTypes.func.isRequired,
+  onAddWhiteboard: PropTypes.func.isRequired,
 };
 
 export default props;
