@@ -46,6 +46,18 @@ ul {
   overflow: scroll;
 }
 
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+}
+
 li {
   margin-top: 0.5em;
   margin-left: 1em;
