@@ -16,7 +16,7 @@ const initalState = {
   infoListItems: [],
 };
 // REDUCER
-const reducer = (state = initalState, action) => {
+const reducerNotes = (state = initalState, action) => {
   switch (action.type) {
     case NOTE_ADD: {
       return Object.assign({}, state, { notes: [...state.notes, action.data] });
@@ -72,6 +72,7 @@ const internalAddNote = (id, note) => ({
     title: note.title,
     infoList: note.infoList,
     color: note.color,
+    whiteboardId: note.whiteboardId,
   },
 });
 
@@ -139,4 +140,4 @@ const updateNoteColor = note => dispatch => noteApi.update(note)
 
 export { addNote, removeNote, updateNoteText, updateNoteColor, replaceNotes };
 export { addInfoListItem, clearInfoList, removeInfoListItem };
-export default reducer;
+export default reducerNotes;
