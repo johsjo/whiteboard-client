@@ -21,6 +21,8 @@
     "js-lint": "node ./node_modules/eslint/bin/eslint.js '**/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:dev": "react-scripts build",
+    "build-docker": "This is not in use!!Should replace 'build' REACT_APP_SERVICE_URL:beta2.se:8081 react-scripts build",
     "test": "npm run js-lint",
     "eject": "react-scripts eject"
   },
