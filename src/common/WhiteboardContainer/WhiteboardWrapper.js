@@ -7,8 +7,9 @@ import AddComponent from '../components/Add';
 
 const WhiteboardWrapper = props => (
   <div className="NoteContainer-wrapper">
-    <InfoComponent header="Floggit Whiteboard" logo="" user={'username'} department={'DreamierTeam'} />
+    <InfoComponent header={`Floggit Whiteboard: ${props.whiteboardId}`} logo="" user={'username'} department={'DreamierTeam'} />
     <AddComponent
+      whiteboardId={props.whiteboardId}
       onAdd={props.handleAdd}
       onAddInfoListItem={props.handleOnAddInfoListItem}
       infoListItems={props.infoListItems}
@@ -16,6 +17,7 @@ const WhiteboardWrapper = props => (
     />
     <NoteList
       notes={props.notes}
+      whiteboardId={props.whiteboardId}
       onRemove={props.handleRemove}
       onSave={props.handleUpdateText}
       onChangeColor={props.handleUpdateColor}

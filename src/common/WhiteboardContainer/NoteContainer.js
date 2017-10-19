@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import WhiteboardWrapper from './WhiteboardWrapper';
 import { addNote, removeNote, updateNoteText, updateNoteColor, addInfoListItem, clearInfoList, removeInfoListItem } from '../../reduxStore/config/notes';
 
-const mapStateToProps = state => ({
-  notes: state.notes,
-  infoListItems: state.infoListItems,
+const mapStateToProps = (state, props) => ({
+  notes: state.reducerNotes.notes,
+  infoListItems: state.reducerNotes.infoListItems,
+  whiteboardId: props.whiteboardId,
 });
 
 const mapDispatchToProps = dispatch => ({
