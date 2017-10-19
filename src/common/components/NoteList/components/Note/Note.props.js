@@ -6,6 +6,7 @@ const props = {
     title: PropTypes.string.isRequired,
     infoList: PropTypes.arrayOf(PropTypes.string),
     color: PropTypes.string,
+    whiteboardId: PropTypes.string.isRequired,
   }),
   onRemove: PropTypes.func.isRequired,
   onSave: PropTypes.func.isRequired,

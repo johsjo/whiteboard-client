@@ -6,7 +6,9 @@ import Note from './components/Note';
 const NoteList = props => (
   <ul className="notes">
     {
-      props.notes.map(note => (
+      props.notes.filter(note =>
+        (props.whiteboardId === note.whiteboardId),
+      ).map(note => (
         <Note
           key={note.id}
           note={note}
@@ -19,7 +21,7 @@ const NoteList = props => (
     }
   </ul>
 );
-NoteList.propTypes = noteListProps;
 
+NoteList.propTypes = noteListProps;
 
 export default NoteList;

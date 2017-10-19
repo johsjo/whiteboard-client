@@ -7,6 +7,7 @@ const props = {
     infoList: PropTypes.arrayOf(PropTypes.string),
     color: PropTypes.string.isRequired,
   })),
+  whiteboardId: PropTypes.string.isRequired,
   onRemove: PropTypes.func.isRequired,
   onSave: PropTypes.func.isRequired,
   onChangeColor: PropTypes.func.isRequired,
